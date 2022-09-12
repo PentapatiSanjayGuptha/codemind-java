@@ -1,5 +1,5 @@
-import java.util.*;
-class main
+import java.util.Scanner;
+class Main
 {
     public static void main(String args[])
     {
@@ -10,12 +10,13 @@ class main
         {
             for(int j=1;j<=n;j++)
             {
-                if(i==j)
-                System.out.print("0");
+                if(i==j || i+j==n+1)
+                System.out.print("x" );
                 else
-                System.out.print("x");
+                System.out.print("0" );
             }
-            System.out.println();
+                System.out.println();
         }
     }
+    
 }
