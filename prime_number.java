@@ -4,16 +4,16 @@ class Main
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int n,count=0;
+        int n,i,c=0;
         n=sc.nextInt();
-        for(int i=1; i<=n; i++)
+        for(i=1;i<n;i++)
         {
-            if(n%i==0) count++;
+            if(n%i==0)
+            c++;
         }
-            if(count==2)
-            System.out.println("prime" );
-            else
-            System.out.println
-            ("not a prime" );
-        }
+        if(c==1)
+        System.out.println("prime");
+        else
+        System.out.print("not a prime");
+    }
 }
