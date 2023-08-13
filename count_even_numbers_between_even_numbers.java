@@ -1,37 +1,36 @@
 import java.util.*;
-class Main
+public class Main
 {
     public static void main(String args[])
     {
-    Scanner sc=new Scanner(System.in);
-    int n,x[],a=0,b=0,c=0;
-    n=sc.nextInt();
-    x=new int[n];
-    for(int i=0;i<n;i++)
-    {
-        x[i]=sc.nextInt();
-    }
-    for(int i=0;i<n;i++)
-    {
-        if(x[i]%2==0)
+        Scanner sc=new Scanner(System.in);
+        int x[],n,c=0,a=0,b=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(int i=0;i<n;i++)
         {
-        a=i;
-        break;
+            x[i]=sc.nextInt();
         }
-    }
-    for(int i=n-1;i>0;i--)
-    {
-        if(x[i]%2==0)
+        for(int i=0;i<=n-1;i++)
         {
-        b=i;
-        break;
+            if(x[i]%2==0){
+            a=i;
+            break;
+            }
         }
-    }
-    for(int i=a+1;i<b;i++)
-    {
-        if(x[i]%2==0)
-        c++;
-    }
-    System.out.println(c);
+        for(int i=n-1;i>=0;i--)
+        {
+            if(x[i]%2==0)
+            {
+            b=i;
+            break;
+            }
+        }
+        for(int i=a+1;i<b;i++)
+        {
+            if(x[i]%2==0)
+            c++;
+        }
+        System.out.print(c);
     }
 }
